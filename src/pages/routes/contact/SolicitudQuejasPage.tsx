@@ -22,22 +22,21 @@ export function SolicitudQuejasPage() {
     setError(null);
 
     try {
+      const body = new URLSearchParams({
+        company,
+        ruc,
+        contact,
+        email,
+        phone,
+        laboratoryRelated,
+        serviceReason,
+        description,
+        website,
+      });
+
       const response = await fetch(`${ALEPH_API_BASE}/api/send-complaint-request`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          company,
-          ruc,
-          contact,
-          email,
-          phone,
-          laboratoryRelated,
-          serviceReason,
-          description,
-          website,
-        }),
+        body,
       });
 
       const payload = await response.json();
