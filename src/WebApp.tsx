@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer';
+import { SeoMetadata } from './components/SeoMetadata';
 import { SiteHeader } from './components/SiteHeader';
 import { AULA_PUBLIC_URL } from './config/runtime';
 import { normalizePath, pageContent } from './data/siteContent';
@@ -32,6 +33,7 @@ export default function WebApp() {
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+      <SeoMetadata pathname={pathname} />
       <SiteHeader />
       {isHome ? <HomePage /> : RouteComponent ? <RouteComponent /> : content ? <ContentPage content={content} /> : <FallbackPage />}
       <Footer />

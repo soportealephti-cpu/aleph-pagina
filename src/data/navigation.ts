@@ -68,29 +68,29 @@ export const menuItems: MenuItem[] = [
     label: 'SERVICIOS',
     href: '/servicios/',
     children: [
-      { label: 'CALIBRACIONES DOSIMETRICAS', href: '/servicios/calibraciones-dosimetricas/' },
-      { label: 'DOSIMETRIA INDIVIDUAL EXTERNA', href: '/servicios/dosimetria-individual-externa/' },
+      { label: 'CALIBRACIONES DOSIMÉTRICAS', href: '/servicios/calibraciones-dosimetricas/' },
+      { label: 'DOSIMETRÍA INDIVIDUAL EXTERNA', href: '/servicios/dosimetria-individual-externa/' },
       { label: 'PRUEBA DE HERMETICIDAD', href: '/servicios/prueba-de-hermeticidad/' },
       { label: 'MAPEO DE TASA DE DOSIS', href: '/servicios/mapeo-de-tasa-de-dosis/' },
       {
-        label: 'MANTENIMIENTO PREVENTIVO Y CALIBRACION A DENSIMETROS',
+        label: 'MANTENIMIENTO PREVENTIVO Y CALIBRACIÓN A DENSÍMETROS',
         href: '/servicios/mantenimiento-preventivo-y-calibracion-a-densimetros/',
       },
       {
-        label: 'ALMACENAMIENTO Y GESTION DE DESECHOS RADIACTIVOS',
+        label: 'ALMACENAMIENTO Y GESTIÓN DE DESECHOS RADIACTIVOS',
         href: '/servicios/almacenamiento-y-gestion-de-desechos-radiactivos/',
       },
       { label: 'MONITOREO AMBIENTAL', href: '/servicios/monitoreo-ambiental/' },
       {
-        label: 'CONSULTORIA ESPECIALIZADA',
+        label: 'CONSULTORÍA ESPECIALIZADA',
         href: '/servicios/consultoria-especializada/',
         children: [
           {
-            label: 'DIRECCION DE CAPACITACION NUCLEAR',
+            label: 'DIRECCIÓN DE CAPACITACIÓN NUCLEAR',
             href: '/servicios/direccion-de-capacitacion-nuclear/',
           },
           {
-            label: 'ASESORIA EN PROTECCION RADIOLOGICA',
+            label: 'ASESORÍA EN PROTECCIÓN RADIOLÓGICA',
             href: '/servicios/asesoria-en-proteccion-radiologica/',
           },
         ],
@@ -107,11 +107,11 @@ export const menuItems: MenuItem[] = [
     href: '/productos/',
     children: [
       {
-        label: 'BLINDAJE PARA LA PROTECCION RADIOLOGICA',
+        label: 'BLINDAJE PARA LA PROTECCIÓN RADIOLÓGICA',
         href: '/productos/',
       },
       {
-        label: 'EQUIPOS DE MEDICION E INSTRUMENTOS PARA LA PROTECCION RADIOLOGICA',
+        label: 'EQUIPOS DE MEDICIÓN E INSTRUMENTOS PARA LA PROTECCIÓN RADIOLÓGICA',
         href: '/productos/',
       },
     ],

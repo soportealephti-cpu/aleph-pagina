@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /aula-virtual/
+
+Sitemap: https://www.alephsac.com/sitemap.xml
