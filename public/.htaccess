@@ -1,0 +1,18 @@
+Options -MultiViews
+RewriteEngine On
+
+# Redirecciones permanentes desde las URLs históricas ya indexadas.
+RewriteRule ^calibraciones-dosimetricas/?$ /servicios/calibraciones-dosimetricas/ [R=301,L]
+RewriteRule ^dosimetria-individual-tld/?$ /servicios/dosimetria-individual-externa/ [R=301,L]
+RewriteRule ^prueba-de-hermeticidad-2/?$ /servicios/prueba-de-hermeticidad/ [R=301,L]
+RewriteRule ^mapeo-tasa-dosis/?$ /servicios/mapeo-de-tasa-de-dosis/ [R=301,L]
+RewriteRule ^mantenimiento-de-medidores-nucleares/?$ /servicios/mantenimiento-preventivo-y-calibracion-a-densimetros/ [R=301,L]
+RewriteRule ^almacenamieno-gestion-desechos-radiactivos/?$ /servicios/almacenamiento-y-gestion-de-desechos-radiactivos/ [R=301,L]
+RewriteRule ^monitoreo-ambiental-2/?$ /servicios/monitoreo-ambiental/ [R=301,L]
+RewriteRule ^asesoria-proteccion-radiologica/?$ /servicios/asesoria-en-proteccion-radiologica/ [R=301,L]
+RewriteRule ^transporte-de-material-radiactivo-2/?$ /servicios/transporte-de-material-radiactivo/ [R=301,L]
+
+# Entrega los archivos reales y dirige las rutas de la SPA a React.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

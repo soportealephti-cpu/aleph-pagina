@@ -1,5 +1,6 @@
 node_modules/
 dist/
+aleph-web-cpanel.zip
 .env
 .env.*
 !.env.example
