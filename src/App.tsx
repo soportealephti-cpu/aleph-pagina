@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { SiteHeader } from './components/SiteHeader';
 import { normalizePath, pageContent } from './data/siteContent';
 import { ContentPage } from './pages/ContentPage';
@@ -30,6 +31,7 @@ export default function App() {
       {isStandaloneAula ? null : <SiteHeader />}
       {isHome ? <HomePage /> : RouteComponent ? <RouteComponent /> : content ? <ContentPage content={content} /> : <FallbackPage />}
       {isStandaloneAula ? null : <Footer />}
+      {isStandaloneAula ? null : <FloatingWhatsApp />}
     </main>
   );
 }

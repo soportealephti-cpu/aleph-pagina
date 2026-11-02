@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { SeoMetadata } from './components/SeoMetadata';
 import { SiteHeader } from './components/SiteHeader';
 import { AULA_PUBLIC_URL } from './config/runtime';
@@ -37,6 +38,7 @@ export default function WebApp() {
       <SiteHeader />
       {isHome ? <HomePage /> : RouteComponent ? <RouteComponent /> : content ? <ContentPage content={content} /> : <FallbackPage />}
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
