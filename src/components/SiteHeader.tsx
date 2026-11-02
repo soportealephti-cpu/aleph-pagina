@@ -1,6 +1,14 @@
 import { useState } from 'react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { AULA_PUBLIC_URL } from '../config/runtime';
 import { menuItems, topEmail, topPhones } from '../data/siteContent';
+
+const whatsappUrl = 'https://wa.me/51960549465';
+const socialLinks = [
+  { label: 'Facebook', href: 'https://www.facebook.com/AlephGroupSAC', Icon: Facebook },
+  { label: 'Instagram', href: 'https://www.instagram.com/alephgroupasociados/', Icon: Instagram },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/aleph-group-asociados-sac', Icon: Linkedin },
+];
 
 function DesktopMenu() {
   return (
@@ -241,9 +249,9 @@ export function SiteHeader() {
       <div className="bg-[#0f5ea8] text-white">
         <div className="mx-auto hidden max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.06em] md:grid">
           <div className="flex flex-wrap gap-x-5 gap-y-1">
-            {topPhones.map((phone) => (
-              <span key={phone}>{phone}</span>
-            ))}
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:underline" aria-label="Contactar a Aleph por WhatsApp">
+              {topPhones[0]}
+            </a>
           </div>
           <a
             href="https://portal.alephsac.com"
@@ -252,24 +260,30 @@ export function SiteHeader() {
             Portal de dosimetría
           </a>
           <div className="flex flex-wrap items-center justify-end gap-4">
-            <span>{topEmail}</span>
-            <a href="https://es-la.facebook.com/AlephGroupSAC/" className="hover:opacity-80">
-              Facebook
-            </a>
+            <a href={`mailto:${topEmail}`} className="hover:underline">{topEmail}</a>
+            <div className="flex items-center gap-3">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label} className="transition-opacity hover:opacity-70">
+                  <Icon size={17} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="mx-auto max-w-7xl px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] md:hidden">
           <div className="flex items-center justify-between gap-3">
-            <span className="truncate">{topPhones[0]}</span>
-            <span className="truncate text-right">{topEmail}</span>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="truncate hover:underline">{topPhones[0]}</a>
+            <a href={`mailto:${topEmail}`} className="truncate text-right hover:underline">{topEmail}</a>
           </div>
-          <a
-            href="https://portal.alephsac.com"
-            className="mx-auto mt-2 block w-fit rounded-sm border border-white/60 px-3 py-1 text-center"
-          >
-            Portal de dosimetría
-          </a>
+          <div className="mt-2 flex items-center justify-center gap-5">
+            <a href="https://portal.alephsac.com" className="rounded-sm border border-white/60 px-3 py-1 text-center">Portal de dosimetría</a>
+            {socialLinks.map(({ label, href, Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label} className="hover:opacity-70">
+                <Icon size={17} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

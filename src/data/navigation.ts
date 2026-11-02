@@ -1,6 +1,6 @@
 import type { HeroSlide, MenuItem } from '../types';
 
-export const topPhones = ['+51 960 549 465', '+51 960 617 157', '+51 984 123 230'];
+export const topPhones = ['+51 960 549 465'];
 export const topEmail = 'informes@alephsac.com';
 export const officeAddress = 'Av. Rafael Escardo 154, San Miguel 15087, Lima';
 
