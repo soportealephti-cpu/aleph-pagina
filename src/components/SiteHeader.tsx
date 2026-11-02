@@ -276,7 +276,7 @@ export function SiteHeader() {
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 xl:gap-6 xl:py-4">
           <a href="/" className="flex min-w-0 items-center">
-            <img src="/legacy/azul-1.png" alt="Aleph Group" className="site-logo-primary max-w-[190px] sm:max-w-[220px]" />
+            <img src="/aleph-logo.png" alt="Aleph Group" className="site-logo-primary max-w-[190px] sm:max-w-[220px]" />
           </a>
 
           <DesktopMenu />

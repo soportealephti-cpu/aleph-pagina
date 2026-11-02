@@ -29,7 +29,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 md:grid-cols-3 md:items-start">
         <div className="flex flex-col items-center md:items-start">
           <img
-            src="/legacy/Nosotros_files/azul-1-300x110.png"
+            src="/aleph-logo.png"
             alt="Aleph Group"
             className="h-auto w-full max-w-[300px] object-contain"
           />
