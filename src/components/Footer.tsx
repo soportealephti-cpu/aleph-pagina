@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import { Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { topEmail, topPhones } from '../data/siteContent';
 
 function SocialLink({
   href,
@@ -34,14 +35,14 @@ export function Footer() {
             className="h-auto w-full max-w-[300px] object-contain"
           />
           <div className="mt-6 flex items-center gap-4">
-            <SocialLink href="https://es-la.facebook.com/AlephGroupSAC/" label="Facebook">
+            <SocialLink href="https://www.facebook.com/AlephGroupSAC" label="Facebook">
               <Facebook size={18} strokeWidth={2.2} />
             </SocialLink>
-            <SocialLink href="https://twitter.com/alephgroup" label="Twitter">
-              <Twitter size={18} strokeWidth={2.2} />
+            <SocialLink href="https://www.instagram.com/alephgroupasociados/" label="Instagram">
+              <Instagram size={18} strokeWidth={2.2} />
             </SocialLink>
             <SocialLink
-              href="https://pe.linkedin.com/company/aleph-group-asociados"
+              href="https://www.linkedin.com/company/aleph-group-asociados-sac"
               label="LinkedIn"
             >
               <Linkedin size={18} strokeWidth={2.2} />
@@ -53,12 +54,16 @@ export function Footer() {
           <h2 className="text-3xl font-semibold text-slate-900">Contáctenos</h2>
           <p className="mt-6 text-base font-bold text-slate-900">Atención al cliente</p>
           <div className="mt-3 space-y-1 text-base leading-8 text-slate-700">
-            <p>+51 960 649 465</p>
-            <p>+51 960 617 157</p>
-            <p>+ 51 984 123 230</p>
+            <p>
+              <a href="https://wa.me/51960549465" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f5ea8] hover:underline">
+                {topPhones[0]}
+              </a>
+            </p>
             <p className="pt-2">Lun. a Vie. de 9:00 AM a 6:00 PM</p>
             <p>Sábados de 9:00 AM a 1:00 PM</p>
-            <p className="pt-2">Correo: Informes@alephsac.com</p>
+            <p className="pt-2">
+              Correo: <a href={`mailto:${topEmail}`} className="hover:text-[#0f5ea8] hover:underline">{topEmail}</a>
+            </p>
           </div>
         </div>
 

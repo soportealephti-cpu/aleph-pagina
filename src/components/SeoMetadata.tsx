@@ -133,7 +133,7 @@ function buildStructuredData(pathname: string, title: string, description: strin
       name: SITE_NAME,
       alternateName: 'Aleph SAC',
       url: SITE_URL,
-      logo: `${SITE_URL}/legacy/azul-1.png`,
+      logo: `${SITE_URL}/aleph-logo.png`,
       image: DEFAULT_IMAGE,
       email: topEmail,
       telephone: topPhones[0],
